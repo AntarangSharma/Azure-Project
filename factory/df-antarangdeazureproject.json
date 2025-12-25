@@ -1,0 +1,9 @@
+{
+	"name": "df-antarangdeazureproject",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "77ae4ad3-ac65-4a6a-b978-1193cb21e969",
+		"tenantId": "ce6d05e1-3c5e-4d62-87a8-4c4a2713c113"
+	}
+}
