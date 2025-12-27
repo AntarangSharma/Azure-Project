@@ -207,8 +207,16 @@
 					"secureInput": false
 				},
 				"userProperties": [],
+				"linkedServiceName": {
+					"referenceName": "Azure_sql",
+					"type": "LinkedServiceReference"
+				},
 				"typeProperties": {
-					"scripts": [],
+					"scripts": [
+						{
+							"type": "Query"
+						}
+					],
 					"scriptBlockExecutionTimeout": "02:00:00"
 				}
 			}
