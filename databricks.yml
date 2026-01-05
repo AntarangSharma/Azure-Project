@@ -1,0 +1,42 @@
+bundle:
+  name: spotify_dab
+  uuid: 831102c9-7015-4b7c-a8dd-ef8b0cfb026f
+
+variables:
+  catalog:
+    description: "The catalog to use for the target environment"
+    default: "spotify_cata"
+  schema:
+    description: "The schema to use for the target environment"
+    default: "spotify_cata"
+  presets:
+    description: "Deployment presets and configurations"
+
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: http://adb-7405616744540065.5.azuredatabricks.net
+      root_path: /Workspace/Users/sharmant@oregonstate.edu/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: spotify_cata
+      schema: ${workspace.current_user.short_name}
+ 
+      presets:
+        source_linked_deployment: false
+
+  prod:
+    mode: production
+    workspace:
+      host: http://adb-7405616744540065.5.azuredatabricks.net
+      root_path: /Workspace/PROD/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: spotify_cata
+      schema: prod
+      presets:
+        source_linked_deployment: false
+    permissions:
+      - user_name: sharmant@oregonstate.edu
+        level: CAN_MANAGE
