@@ -104,12 +104,3 @@ databricks bundle run spotify_dab_etl --target dev
 | `adf_publish` | ADF ARM template publish target (auto-managed by ADF) |
 
 > **Note:** `Antarang` and `adf_publish` are managed by Azure Data Factory's git integration — do not manually rebase or delete them.
-
----
-
-## Possible Improvements
-
-- Add a Bronze layer for raw ingest (full medallion: Bronze → Silver → Gold)
-- Parameterise the Spotify API credentials via Databricks Secrets
-- Add DLT data quality expectations (`@dlt.expect_or_drop`)
-- Wire ADF pipeline to CI/CD via GitHub Actions
