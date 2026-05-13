@@ -1,5 +1,23 @@
 # Spotify Lakehouse — Azure + Databricks
 
+[![Azure](https://img.shields.io/badge/Microsoft_Azure-0078D4?logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/)
+[![Databricks](https://img.shields.io/badge/Databricks-FF3621?logo=databricks&logoColor=white)](https://www.databricks.com/)
+[![Delta Lake](https://img.shields.io/badge/Delta_Lake-003B57?logo=databricks&logoColor=white)](https://delta.io/)
+[![PySpark](https://img.shields.io/badge/PySpark-E25A1C?logo=apachespark&logoColor=white)](https://spark.apache.org/docs/latest/api/python/)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+
+## Contents
+
+- [Architecture](#architecture)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Deployment](#deployment)
+- [Resources](#resources)
+- [Branches](#branches)
+
+---
+
 A production-style data lakehouse built on **Azure** and **Databricks**, ingesting Spotify data through a medallion architecture (Silver → Gold) with Delta Live Tables, Unity Catalog, and automated orchestration via Azure Data Factory.
 
 ---
